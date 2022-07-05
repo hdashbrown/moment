@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Love+Light&family=Playfair+Display&display=swap');
+body{
+	justify-content:center;
+
+background: linear-gradient(90deg, rgba(198,218,191,0.7010154403558299) 35%, rgba(243,233,210,0.7990546560421043) 100%);
+overflow-x: hidden; /* Hide scrollbars */
+}
+.header {
+	margin:0;
+  padding: 10px 16px;
+color: #C6DABF;
+font-family: 'Playfair Display', serif;
+font-size:2em;
+background: linear-gradient(90deg, rgba(69,168,139,0.8410714627647934) 0%, rgba(198,218,191,1) 100%);
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+}
+#myHeader:hover{
+color:rgb(60, 0, 60);
+}
+#myHeader:hover:after{
+content:":3";
+}
+/* Page content */
+.content {
+	font-size:25px;
+	padding:10px;
+	background: linear-gradient(90deg, rgba(69,168,139,0.8410714627647934) 0%, rgba(198,218,191,1) 100%);
+	text-align:center;
+}
+
+.content h2{
+	font-family: 'Cute Font', cursive;
+
+	}
+.content h2 b{
+font-family: 'Love Light', cursive;
+font-weight:lighter;
+	}
+.gallery{
+	justify-content:center;
+	}
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 202px;
+}
+.gallery {
+  width: 100%;
+  display:flex;
+  margin:auto 0;
+
+}
+img { max-width: 100%; height: auto; }
+div.gallery img {
+flex:100%;
+  width: 100%;
+  height: auto;
+}
+
+.gallery img:hover {
+	
+	
+	}
+
+@media screen and (max-width: 800px) {
+  .column {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .gallery {
+    padding-left:1%;
+  }
+}
+.mySlides{
+	max-width:400px;
+}
+.hover2 {
+	color:#5C2751;
+  background: 
+    linear-gradient(#5C2751 0 0) no-repeat
+     calc(200% - var(--p,0%)) 100% / 200% var(--p,.08em);
+  transition: .3s var(--t,0s), background-position .3s calc(.3s - var(--t,0s));
+}
+.hover2:hover {
+  --p: 100%;
+  --t: .3s;
+  color: #fff;
+}
+.fa-heart {
+    color: rgb(60, 0, 60);
+    font-size: 25px;
+    position: absolute;
+    animation:  heartMove linear 1;
+    top: -10vh;
+    z-index: 0;
+}
+.fa-heart:hover{
+ color: #1A936F;
+
+}
+
+@keyframes heartMove {
+    0%{
+        transform: translateY(-10vh) ;
+    }
+    100%{
+        transform: translateY(110vh) ;
+    }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Prata&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js"></script>
+  <title>mrb dokan!</title>
+ <body>
+  <script>const body = document.querySelector("body");
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "fas fa-heart";
+    heart.style.left = (Math.random() * 100)+"vw";
+    heart.style.animationDuration = (Math.random()*3)+2+"s"
+    body.appendChild(heart);
+}
+setInterval(createHeart,100);
+setInterval(function name(params) {
+    var heartArr = document.querySelectorAll(".fa-heart")
+    if (heartArr.length > 200) {
+       heartArr[0].remove()
+    }
+    //console.log(heartArr);
+},100)
+  </script>
+    <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+<div class="top-container">
+  <p> </p>
+</div>
+<div class="header" id="myHeader">
+  <h1>hoş geldin!</h1>
+</div>
+<div class="content"><h2 class="hover2">seni seviyorum!</h2>
+<div class="gallery">
+<img class="mySlides" src="https://files.catbox.moe/3sr3j9.jpg">
+<img class="mySlides" src="https://files.catbox.moe/mvjs1x.jpg">
+<img class="mySlides" src="https://files.catbox.moe/up9c88.jpg">
+<img class="mySlides" src="https://files.catbox.moe/iqiqny.jpg">
+<img class="mySlides" src="https://files.catbox.moe/3n1b5p.jpg">
+<img class="mySlides" src="https://files.catbox.moe/gyi30e.jpg">
+<img class="mySlides" src="https://files.catbox.moe/ij3ocv.jpg">
+<img class="mySlides" src="https://files.catbox.moe/0d3dx0.jpg">
+<img class="mySlides" src="https://files.catbox.moe/3ajqzo.jpg">
+<img class="mySlides" src="https://files.catbox.moe/iz1h6q.jpg">
+<img class="mySlides" src="https://files.catbox.moe/js5vx0.jpg">
+<img class="mySlides" src="https://files.catbox.moe/bz0mld.jpg">
+</div><h2 class="hover2">hem de <b>çok</b>!</h2></div>
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
